@@ -19,7 +19,9 @@ function NavBar({businessName, navStyle, links}) {
     backgroundColor: 'hsl(42 60% 98%)',
     color: 'black',
     fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif',
-    fontWeight: 'bold'
+    fontWeight: 'bold',
+    paddingLeft: '120px',
+    paddingRight: '60px'
   }
 
   function onMouseEnter(e) {

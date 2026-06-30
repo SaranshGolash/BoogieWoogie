@@ -9,7 +9,9 @@ function Main() {
         alignItems: 'center',
         flexFlow: 'row wrap',
         gap: '20px',
-        padding: '20px'
+        padding: '20px',
+        paddingLeft: '120px',
+        paddingRight: '60px'
     };
     
     const headingContentStyle = {
@@ -31,7 +33,7 @@ function Main() {
         alignItems: 'center',
         flexFlow: 'row wrap',
         gap: '20px'
-    }
+    };
 
     const btnStyle1 = {
         background: 'hsl(24 85% 45%)',
@@ -67,6 +69,39 @@ function Main() {
         e.target.style.boxShadow = 'none';
     };
 
+    const imgStyle = {};
+
+    const impactSectionStyle = {
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        gap: '15px',
+        padding: '40px 20px',
+        background: 'hsl(24 85% 45%)',
+        textAlign: 'center'
+    };
+
+    const statisticsStyle = {
+        display: 'flex',
+        justifyContent: 'center',
+        gap: '80px',
+        marginTop: '20px',
+        flexWrap: 'wrap'
+    };
+
+    const spanStyle = {
+        color: 'white',
+        fontSize: '38px',
+        fontFamily: '"DM Sans", sans-serif, "Fraunces", serif, Menlo, monospace',
+        fontWeight: 'bold'
+    };
+
+    const spanStyle2 = {
+        color: 'color-mix(in oklab, hsl(0 0% 100%) 80%, transparent)',
+        fontSize: '22px',
+        fontWeight: '200'
+    };
+
     return (
         <>
             <NavBar businessName={"Boogie Woogie"} links={[
@@ -82,7 +117,24 @@ function Main() {
                         <Button btnStyle={btnStyle2} textBtn={"Our Story"} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave} />
                     </div>
                 </div>
-                <div className="heading-image"></div>
+                <div className="heading-image">
+                    <img src="" alt="" style={imgStyle} />
+                </div>
+            </div>
+            <div className="impact-section" style={impactSectionStyle}>
+                <span style={spanStyle}>Real People, Real Impact</span>
+                <span style={{...spanStyle, fontSize: '22px', color:'color-mix(in oklab, hsl(0 0% 100%) 80%, transparent)' ,fontWeight: '200', }}>We measure our success not just by numbers, but by the hands that help and the lives that are touched.</span>
+                <div className="statistics" style={statisticsStyle}>
+                    <span style={{...spanStyle, fontSize: '56px', fontWeight: '200'}}>500+<br /><span style={{...spanStyle, ...spanStyle2 }}>People Helped</span></span>
+                    <br />
+                    <span style={{...spanStyle, ...spanStyle2, fontSize: '100px', color:'color-mix(in oklab, hsl(0 0% 100%) 10%, transparent)', lineHeight: '150px'}}>|</span>
+                    <br />
+                    <span style={{...spanStyle, fontSize: '56px', fontWeight: '200'}}>50+<br /><span style={{...spanStyle, ...spanStyle2}}>Volunteers</span></span>
+                    <br />
+                    <span style={{...spanStyle, ...spanStyle2, fontSize: '100px', color:'color-mix(in oklab, hsl(0 0% 100%) 10%, transparent)', lineHeight: '150px'}}>|</span>
+                    <br />
+                    <span style={{...spanStyle, fontSize: '56px', fontWeight: '200'}}>₹100,000+<br /><span style={{...spanStyle, ...spanStyle2}}>Raised</span></span>
+                </div>
             </div>
         </>
     );
